@@ -1,0 +1,37 @@
+:root {
+  font-weight: 400;
+  font-family: fantasy !important;
+  color-scheme: light dark;
+  color: #b3ffff;
+  background-image: linear-gradient(
+  	to bottom left, #001c02, #005407	
+	);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: black;
+    background-image: linear-gradient(
+  		to bottom left, #00a80e, #52ff60	
+	);
+  }
+}
+
