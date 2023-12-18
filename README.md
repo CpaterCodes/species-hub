@@ -3,5 +3,9 @@
 ## Rationale
 
 A react frontend interface intended to consume and present data regarding
-biodiversity.
+various species.
+
+## Feature Specs 
+
+[todo]
 
