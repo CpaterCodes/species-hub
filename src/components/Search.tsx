@@ -1,16 +1,19 @@
 import {ReactElement, useEffect, useState} from "react";
 
 type Props = {
-	suggestor: (term: string) => string[];
+	getSuggestions: (str: string) => string[];
 }
 
 export default function Search(
-	{suggestor}: Props
+	{getSuggestions}: Props
 ): ReactElement<Props> {
 	const [term, setTerm] = useState<string>('');
 	const [suggestions, setSuggestions] = useState<string[]>([]);
 	useEffect(
-		() => setSuggestions(suggestor(term)),
+		function(){
+			if (term === "") return;
+			setSuggestions(getSuggestions(term));
+		},
 		[term]
 	);
 
@@ -19,7 +22,7 @@ export default function Search(
 			role="search-bar" 
 			onChange={event => setTerm(event.target.value)}
 		/>
-		{suggestions.map(s => <p>{s}</p>)}
+		{suggestions.map(s => <p key={s}>{s}</p>)}
 	</section>;	
 }
 
