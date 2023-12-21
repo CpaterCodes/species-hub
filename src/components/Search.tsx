@@ -1,4 +1,4 @@
-import {ReactElement, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 type Props = {
 	getSuggestions: (str: string) => string[];
@@ -6,16 +6,9 @@ type Props = {
 
 export default function Search(
 	{getSuggestions}: Props
-): ReactElement<Props> {
-	const [term, setTerm] = useState<string>('');
-	const [suggestions, setSuggestions] = useState<string[]>([]);
-	useEffect(
-		function(){
-			if (term === "") return;
-			setSuggestions(getSuggestions(term));
-		},
-		[term]
-	);
+) {
+	const [term, setTerm] = useState("");
+	const suggestions = term === "" ? [] : getSuggestions(term);
 
 	return <section>
 		<input 
