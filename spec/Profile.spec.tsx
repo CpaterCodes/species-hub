@@ -6,16 +6,17 @@ import { expect, describe, test, beforeAll} from 'vitest';
 describe("Profile", function(){
 	beforeAll(
 		async function(){ 
-			const animalInfo = {
-				taxonomy: [
-					"Kingdom", "Phylum", "Order", 
-					"Family", "Genus", "Species"
-				],
-				commonName: "Animal",
-				endangerment: "least concern"
-			};
+			const taxonomy = [
+				"Kingdom", "Phylum", "Order", "Family", "Genus", "Species"
+			]
+			const commonName = "Animal"
+			const endangerment = "least concern"
 			return await render(
-			<Profile animalInfo={animalInfo}/>);
+			<Profile 
+				commonName={commonName}
+				taxonomy={taxonomy}
+				endangerment={endangerment}
+			/>);
 		}
 	);
 
@@ -23,18 +24,20 @@ describe("Profile", function(){
 		for (const taxon of [
 			"Kingdom", "Phylum", "Order", "Family", "Genus", "Species"
 		]){
-			const taxonDisplay = await screen.queryByText(taxon);
+			const taxonDisplay = await screen.getByText(taxon);
 			expect(taxonDisplay).toBeInTheDocument();
 		}
 	});
 
 	test("It will present endangerment status", async function(){
-		const endangerment = await screen.queryByText("least concern");
+		const endangerment = await screen.getByText(
+			"Status: least concern"
+		);
 		expect(endangerment).toBeInTheDocument();
 	});
 
 	test("It will show the common name", async function(){
-		const commonName = await screen.queryByText("Animal");
+		const commonName = await screen.getByText("Animal");
 		expect(commonName).toBeInTheDocument();
 	});
 });
