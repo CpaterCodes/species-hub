@@ -6,17 +6,16 @@ import { expect, describe, test, beforeEach} from 'vitest';
 describe("Profile", function(){
 	beforeEach(
 		async function(){ 
-			const taxonomy = [
-				"Kingdom", "Phylum", "Order", "Family", "Genus", "Species"
-			]
-			const commonName = "Animal"
-			const endangerment = "least concern"
+			const animalInfo = {
+				taxonomy: [
+					"Kingdom", "Phylum", "Order", 
+					"Family", "Genus", "Species"
+			],
+				commonName: "Animal",
+				endangerment: "least concern"
+			}
 			return await render(
-			<Profile 
-				commonName={commonName}
-				taxonomy={taxonomy}
-				endangerment={endangerment}
-			/>);
+			<Profile {...animalInfo}/>);
 		}
 	);
 
