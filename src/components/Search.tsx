@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 type Props = {
 	getSuggestions: (str: string) => string[];
@@ -12,7 +12,7 @@ export default function Search(
 
 	return <section>
 		<input 
-			role="search-bar" 
+			role="search" 
 			onChange={event => setTerm(event.target.value)}
 		/>
 		{suggestions.map(s => <p key={s}>{s}</p>)}

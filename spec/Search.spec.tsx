@@ -20,7 +20,7 @@ describe('Search', function(){
 	test(
 		"It will present suggestions with changing input",
 		async function(){
-			const searchBar = screen.getByRole("search-bar");
+			const searchBar = screen.getByRole("search");
 			fireEvent.change(searchBar, {target: {value: "ca"}});
 			expect(
 				await screen.queryByText(/camel/i)
