@@ -51,9 +51,9 @@ yarn install
 
 3. Run the tests
 
-*With your package manager of choice as $pkgManager...*
+*With your package manager of choice as* `$pkgManager...`
 
-```bash
+```
 $pkgManager test
 ```
 
