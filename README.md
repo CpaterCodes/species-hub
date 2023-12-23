@@ -25,3 +25,44 @@ I wish to be able to commit a search and bring this animal up
 [Todo]
 ```
 
+## How to run
+
+*Note: Project is currently in early stages*
+
+1. Clone and navigate to this repo.
+
+```bash
+git clone https://github.com/CpaterCodes/species-hub.git
+cd species-hub
+```
+
+2. Install the repo dependencies with your package manager of choice!
+
+```bash
+# pnpm
+pnpm install
+
+# npm
+npm install
+
+# yarn
+yarn install
+```
+
+3. Run the tests
+
+*With your package manager of choice as $pkgManager...*
+
+```bash
+$pkgManager test
+```
+
+4. Run the project
+
+```bash
+$pkgManager run dev
+```
+
+5. The project will run at localhost:5173 by default.
+    Simply press ctrl-c to stop the program.
+
