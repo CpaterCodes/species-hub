@@ -11,7 +11,7 @@ export default function Profile(
 	return <section>
 		<hgroup>
 			<h2>{commonName}</h2>
-			<h3>{taxonomy.join("::")}; Status: {endangerment}</h3>
+			<h3>{taxonomy.join("::")} <br/> Status: {endangerment}</h3>
 		</hgroup>
 	</section>
 }
