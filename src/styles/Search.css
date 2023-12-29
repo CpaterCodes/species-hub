@@ -1,0 +1,27 @@
+
+
+#Search {
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	width: 50%;
+	outline: none;
+	border: solid lightblue 1px;
+}
+
+.suggestion {
+	list-style-type: none;
+	min-width: 100%;
+}
+
+#suggestions {
+	width: 50%;
+	max-height: 100%;
+	overflow: scroll;
+	box-shadow: 0 1px 5px lightblue;
+	border-radius: 0 0 10px 10px;
+}

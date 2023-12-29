@@ -1,4 +1,3 @@
-import Profile from './components/Profile';
 import Search from './components/Search';
 import './styles/App.css';
 
@@ -10,16 +9,8 @@ const App = () =>
          		Welcome to the Jungle!	
         	</p>
 		</hgroup>
-		<aside>
-			<Search 
-				getSuggestions={(str) => str.split('')}
-			/>
-			<Profile 
-				commonName="Animal" 
-				taxonomy={["Organism", "Creature"]}
-				endangerment="Least Concern"
-			/>
-		</aside>
+		<Search getSuggestions={str => str.split('')}/>
+		. . .
     </>;
 
 export default App;
