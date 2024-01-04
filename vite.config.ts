@@ -8,6 +8,10 @@ export default defineConfig({
 	test: {
 		globals: true,
 		environment: "jsdom",
-  }
+	},
+	css: {
+		transformer: 'lightningcss'
+	},
+	build: { cssMinify: 'lightningcss' }
 });
 
