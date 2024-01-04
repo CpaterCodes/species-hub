@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom/vitest";
-import Profile from "../src/components/Profile";
+import Profile from "../../src/components/Profile";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { expect, describe, test, beforeEach} from 'vitest';
 

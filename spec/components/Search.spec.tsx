@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom/vitest";
-import Search from "../src/components/Search";
+import Search from "../../src/components/Search";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { expect, beforeEach, describe, test} from 'vitest';
 
